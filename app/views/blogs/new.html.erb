@@ -1,0 +1,9 @@
+<div>
+  <%= form_for @blogs do |f| %>
+    <h5> 名前</h5>
+    <%= f.text_field :name, placeholder: '名前' %>
+    <h5> メッセージ</h5>
+    <%= f.text_field :text, placeholder: 'text' %>
+    <%= f.submit "投稿" %>
+  <% end %>
+</div>
