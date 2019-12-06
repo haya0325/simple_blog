@@ -1,0 +1,7 @@
+        <div style="border: 1px solid #cccccc; padding: 10px;">
+          <p><%= blog.text %></p>
+          <% if user_signed_in? && current_user.id == blog.user_id %>
+            <%= link_to '編集', "/blogs/#{blog.id}/edit", method: :get %>
+            <%= link_to '削除', "/blogs/#{blog.id}", method: :delete %>
+          <% end %>
+        </div>

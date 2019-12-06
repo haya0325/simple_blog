@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample</title>
+  <style type="text/css" href="./style.css"></style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">     
+</head>
+
+<body>
+  <nav class="blue lighten-1">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Message List</a>
+    </div>
+  </nav>
+
+    <div class="contents row" >
+      <% @blogs.each do |blog| %>
+        <%= render partial: "blog", locals: { blog: blog } %>
+      <% end %>
+    </div>
+</body>
+</html>
